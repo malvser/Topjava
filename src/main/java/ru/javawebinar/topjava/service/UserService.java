@@ -17,9 +17,11 @@ public interface UserService {
 
     User getByEmail(String email) throws NotFoundException;
 
+    User getWithMeals(int id);
+
     List<User> getAll();
 
     void update(User user);
-    
+
     void evictCache();
 }
