@@ -15,8 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class RootController {
-    @Autowired
-    private UserService userService;
 
     @Autowired
     private UserMealService mealService;
@@ -27,8 +25,7 @@ public class RootController {
     }
 
     @RequestMapping(value = "/users", method = RequestMethod.GET)
-    public String userList(Model model) {
-        model.addAttribute("userList", userService.getAll());
+    public String userList() {
         return "userList";
     }
 
