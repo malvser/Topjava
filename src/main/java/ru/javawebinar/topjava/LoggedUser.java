@@ -12,6 +12,8 @@ import ru.javawebinar.topjava.util.UserMealsUtil;
 // Mock implementation
 
 public class LoggedUser extends org.springframework.security.core.userdetails.User {
+    static final long serialVersionUID = 1L;
+
     private UserTo userTo;
 
     public LoggedUser(User user) {
